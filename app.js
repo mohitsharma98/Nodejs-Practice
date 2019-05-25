@@ -9,7 +9,7 @@ var indexRouter = require('./routes/index');
 var expressHbs = require('express-handlebars');
 var app = express();
 
-mongoose.connect('localhost:27017/shopping');
+mongoose.connect('mongodb://127.0.0.1:27017/shopping', {useNewUrlParser: true});
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
